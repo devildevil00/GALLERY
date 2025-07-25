@@ -1,0 +1,346 @@
+
+header {
+  border-bottom: 1px solid #e6e6e6;
+  padding: 16px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+  position: relative;
+  z-index: 1000;
+}
+.logo {
+  font-weight: 700;
+  font-size: 18px;
+  user-select: none;
+}
+.logo .blue {
+  color: #3b7de3;
+}
+nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  font-weight: 500;
+  color: #5f5f5f;
+}
+nav > div {
+  cursor: pointer;
+  position: relative;
+  white-space: nowrap;
+}
+nav > div:hover {
+  color: #000;
+}
+nav .dropdown-arrow {
+  margin-left: 4px;
+  font-size: 10px;
+}
+.btn-share {
+  background-color: #2f7af9;
+  border: none;
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  user-select: none;
+}
+.btn-share:active {
+  background-color: #1e5edb;
+}
+
+/* Mobile menu toggle button */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #5f5f5f;
+  padding: 8px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  position: relative;
+  z-index: 1100;
+}
+.menu-toggle:hover {
+  background-color: #e6e6e6;
+}
+.menu-toggle:focus {
+  outline: 2px solid #3b7de3;
+  outline-offset: 2px;
+  background-color: #d0e1ff;
+}
+.menu-toggle .sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+main {
+  max-width: 1200px;
+  margin: 40px auto 80px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+.left-section {
+  flex: 1 1 60%;
+  max-width: 720px;
+}
+h1 {
+  font-weight: 900;
+  font-size: 46px;
+  
+  line-height: 1.1;
+}
+h1 .blue {
+  color: #3b7de3;
+}
+p.description {
+  font-weight: 400;
+  font-size: 16px;
+  margin: 0 0 24px 0;
+  color: #4a4a4a;
+}
+p.description a {
+  color: #4a4a4a;
+  text-decoration: underline;
+}
+form {
+  display: flex;
+  gap: 12px;
+  max-width: 720px;
+}
+input[type="text"] {
+  flex-grow: 1;
+  font-size: 14px;
+  padding: 12px 16px;
+  border: 1px solid #d9d9d9;
+  border-radius: 6px;
+  outline-offset: 2px;
+  outline-color: transparent;
+  transition: outline-color 0.2s ease;
+}
+input[type="text"]:focus {
+  outline-color: #3b7de3;
+}
+button.start-btn {
+  background-color: #1a202c;
+  border: none;
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 12px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  user-select: none;
+  min-width: 72px;
+}
+button.start-btn:active {
+  background-color: #121721;
+}
+.disclaimer {
+  font-size: 11px;
+  color: #6b6b6b;
+  margin-top: 8px;
+  max-width: 720px;
+}
+.disclaimer a {
+  font-weight: 700;
+  color: #4a4a4a;
+  text-decoration: underline;
+}
+.right-section {
+  flex: 1 1 35%;
+  max-width: 360px;
+  background: #f9fafc;
+  border: 1px solid #e1e4eb;
+  border-radius: 8px;
+  padding: 24px 24px 32px 24px;
+  font-size: 14px;
+  color: #2f2f2f;
+}
+.right-section strong {
+  font-weight: 700;
+}
+.right-section .highlight-orange {
+  color: #f36c00;
+}
+.right-section hr {
+  border: none;
+  border-top: 1px solid #d9d9d9;
+  margin: 8px 0 16px 0;
+}
+.right-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+.right-section ul li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  color: #2f2f2f;
+}
+.right-section ul li .check-icon {
+  color: #2f9e4f;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+.right-section ul li a {
+  color: #3b7de3;
+  font-weight: 500;
+}
+.right-section ul li a:hover {
+  text-decoration: underline;
+}
+.right-section .btn-get-started {
+  width: 100%;
+  background-color: #3b7de3;
+  border: none;
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 12px 0;
+  border-radius: 6px;
+  cursor: pointer;
+  user-select: none;
+}
+.right-section .btn-get-started:active {
+  background-color: #2a5ecb;
+}
+
+/* Responsive styles */
+@media (max-width: 900px) {
+  main {
+    flex-direction: column;
+    margin: 40px 20px 60px;
+  }
+  .left-section, .right-section {
+    max-width: 100%;
+    flex: none;
+  }
+  .right-section {
+    margin-top: 32px;
+  }
+}
+@media (max-width: 480px) {
+  header {
+    padding: 12px 16px;
+    font-size: 12px;
+  }
+  .logo {
+    font-size: 16px;
+  }
+  nav {
+    gap: 16px;
+  }
+  main {
+    margin: 24px 16px 40px;
+  }
+  h1 {
+    font-size: 28px;
+  }
+  p.description {
+    font-size: 14px;
+  }
+  form {
+    flex-direction: column;
+    gap: 12px;
+  }
+  button.start-btn {
+    width: 100%;
+    min-width: auto;
+    padding: 12px 0;
+  }
+}
+
+/* Mobile menu styles */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+  nav {
+    position: fixed;
+    top: 56px;
+    right: 0;
+    background: white;
+    flex-direction: column;
+    width: 220px;
+    border-left: 1px solid #e6e6e6;
+    border-bottom: 1px solid #e6e6e6;
+    box-shadow: -2px 0 8px rgb(0 0 0 / 0.1);
+    padding: 16px 0;
+    gap: 0;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    height: calc(100vh - 56px);
+    overflow-y: auto;
+    z-index: 999;
+  }
+  nav.open {
+    transform: translateX(0);
+  }
+  nav > div, nav > button.btn-share {
+    padding: 12px 24px;
+    border-bottom: 1px solid #e6e6e6;
+    width: 100%;
+    box-sizing: border-box;
+    font-weight: 600;
+    color: #2f2f2f;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+  }
+  nav > div:hover {
+    background-color: #f0f4ff;
+    color: #3b7de3;
+  }
+  nav > button.btn-share {
+    border: none;
+    background-color: #2f7af9;
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+    border-radius: 0;
+    cursor: pointer;
+    justify-content: center;
+  }
+  nav > button.btn-share:active {
+    background-color: #1e5edb;
+  }
+}
+
+.video-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.video-info ul li {
+  border: 1px solid #3b7de3;
+  padding: 8px 12px;
+  margin-bottom: 8px;
+  color: #3b7de3;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width:230px;
+  display:flex;
+}
+.element.style {
+  max-width: 1000px;
+}
