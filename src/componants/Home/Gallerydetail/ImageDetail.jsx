@@ -14,7 +14,7 @@ function ImageDetail() {
     const fetchImageDetails = async () => {
         try {
             setLoading(true);
-            const url = `http://localhost:8080/api/images/${id}`;
+            const url = `https://gallery-backend-v1co.onrender.com/api/images/${id}`;
             const result = await fetch(url);
             const { data } = await result.json();
             setImageDetails(data);
@@ -30,7 +30,7 @@ function ImageDetail() {
         if (!window.confirm('Are you sure you want to delete this image?')) return;
         
         try {
-            const url = `http://localhost:8080/api/images/${id}`;
+            const url = `https://gallery-backend-v1co.onrender.com/api/images/${id}`;
             await fetch(url, { method: 'DELETE' });
             toast.success('Image deleted successfully');
             navigate('/');
