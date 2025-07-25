@@ -17,7 +17,7 @@ function ImageGallary() {
 
     const fetchImages = async () => {
         try {
-            const url = 'http://localhost:8080/api/images';
+            const url = 'https://gallery-backend-v1co.onrender.com/api/images';
             const result = await fetch(url);
             const { data } = await result.json();
             setImageList(data);
@@ -29,7 +29,7 @@ function ImageGallary() {
 
     const deleteImage = async (imageId) => {
         try {
-            const url = `http://localhost:8080/api/images/${imageId}`;
+            const url = `https://gallery-backend-v1co.onrender.com/api/images/${imageId}`;
             const result = await fetch(url, { method: 'DELETE' });
             const { message } = await result.json();
             toast.success(message);
@@ -44,7 +44,7 @@ function ImageGallary() {
         
         try {
             const deletePromises = selectedImages.map(id => 
-                fetch(`http://localhost:8080/api/images/${id}`, { method: 'DELETE' })
+                fetch(`https://gallery-backend-v1co.onrender.com/api/images/${id}`, { method: 'DELETE' })
             );
             await Promise.all(deletePromises);
             toast.success(`${selectedImages.length} images deleted successfully`);
@@ -110,7 +110,7 @@ function ImageGallary() {
                 method: 'POST',
                 body: formData
             };
-            const url = 'http://localhost:8080/api/images/upload-images';
+            const url = 'https://gallery-backend-v1co.onrender.com/api/images/upload-images';
             const result = await fetch(url, options);
             const { message } = await result.json();
             fetchImages();
